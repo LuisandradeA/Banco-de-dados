@@ -2961,18 +2961,13 @@
   "RootNamespace": "Banco_de_dados",
   "Documents": [
     {
-      "FilePath": "Views/Home/Privacy.cshtml",
-      "TargetPath": "Views/Home/Privacy.cshtml",
+      "FilePath": "Views/Empresa/Index.cshtml",
+      "TargetPath": "Views/Empresa/Index.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "Views/Shared/_CookieConsentPartial.cshtml",
       "TargetPath": "Views/Shared/_CookieConsentPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Home/Index.cshtml",
-      "TargetPath": "Views/Home/Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2983,6 +2978,11 @@
     {
       "FilePath": "Views/Shared/Error.cshtml",
       "TargetPath": "Views/Shared/Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Empresa/Privacy.cshtml",
+      "TargetPath": "Views/Empresa/Privacy.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Banco_de_dados.Models;
 using Banco_de_dados.Repository;
+using Microsoft.Extensions.Configuration;
+
 namespace Banco_de_dados.Controllers
 {
     public class EmpresaController : Controller
     {
-        private IEmpresaRepository _empresaRepository;
+        private EmpresaRepository _empresaRepository;
         
-        public EmpresaController(IEmpresaRepository empresaRepository){
-            _empresaRepository = empresaRepository;
+        public EmpresaController(IConfiguration configuration){
+            _empresaRepository = new EmpresaRepository(configuration);
         }
         
         public IActionResult Index()
         {
-            
+            _empresaRepository.GetAllEmpregados();
             
             return View();
         }
