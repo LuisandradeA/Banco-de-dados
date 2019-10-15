@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    
+    @model List<Empregado>
 }
 
 <div class="text-center">
@@ -8,7 +8,10 @@
 </div>
 
 <div>
-   @Html.ActionLink("Empregados", "Index", "Empregado")
+   @foreach (var item in Model)
+   {
+       <p>@item.Nome</p>
+   }
 </div>
 
 

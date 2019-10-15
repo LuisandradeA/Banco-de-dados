@@ -1,5 +1,6 @@
 
 
+using System.Collections.Generic;
 using System.Data;
 using Banco_de_dados.Models;
 using Dapper;
@@ -11,7 +12,7 @@ namespace Banco_de_dados.Repository
     
     public interface IEmpresaRepository
     {
-        void GetAllEmpregados();
+        IEnumerable<Empregado> GetAllEmpregados();
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -26,10 +27,11 @@ namespace Banco_de_dados.Repository
                 return new NpgsqlConnection(connectionString);
             }
         }
-        public void GetAllEmpregados(){
+        public IEnumerable<Empregado> GetAllEmpregados(){
             using(IDbConnection dbConnection = Connection){
                 dbConnection.Open();
                 var teste = dbConnection.Query<Empregado>("SELECT * FROM empregado");
+                return teste;
             }        
         }
     }

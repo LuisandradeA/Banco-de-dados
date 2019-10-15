@@ -10,19 +10,19 @@ using Microsoft.Extensions.Configuration;
 
 namespace Banco_de_dados.Controllers
 {
-    public class EmpresaController : Controller
+    public class EmpregadoController : Controller
     {
         private EmpresaRepository _empresaRepository;
         
-        public EmpresaController(IConfiguration configuration){
+        public EmpregadoController(IConfiguration configuration){
             _empresaRepository = new EmpresaRepository(configuration);
         }
         
         public IActionResult Index()
         {
+            var listaTodosEmpregados = _empresaRepository.GetAllEmpregados();
             
-            
-            return View();
+            return View(listaTodosEmpregados);
         }
 
         public IActionResult Privacy()
