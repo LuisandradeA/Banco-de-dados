@@ -14,6 +14,8 @@ namespace Banco_de_dados.Repository
     {
         IEnumerable<Empregado> GetAllEmpregados();
         IEnumerable<Dependente> GetAllDependentes();
+        IEnumerable<Departamento> GetAllDepartamentos();
+
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -42,6 +44,13 @@ namespace Banco_de_dados.Repository
                 return teste;
             }        
         }
-    
+        public IEnumerable<Departamento> GetAllDepartamentos(){
+            using(IDbConnection dbConnection = Connection){
+                dbConnection.Open();
+                var teste = dbConnection.Query<Departamento>("SELECT * FROM departamento");
+                return teste;
+            }        
+        }
+        
     }
 }

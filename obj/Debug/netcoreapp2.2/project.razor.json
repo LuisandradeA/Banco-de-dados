@@ -3016,8 +3016,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Departamento/Privacy.cshtml",
+      "TargetPath": "Views/Departamento/Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Shared/_Layout.cshtml",
       "TargetPath": "Views/Shared/_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Departamento/Index.cshtml",
+      "TargetPath": "Views/Departamento/Index.cshtml",
       "FileKind": "mvc"
     }
   ],
