@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Dependentes";
+    @model List<Dependente>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Dependentes</h1>
+</div>
+
+
+<div>
+  <table class="table">
+        <tr>
+          <th>Empregado</th>
+          <th>Nome</th>
+          <th>Sexo</th>
+          <th>Data de Nascimento</th>
+          <th>Parentesco</th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Empregado </td>
+                <td>@item.Nome </td>
+                <td>@item.Sexo </td>
+                <td>@item.Dtnascimento </td>
+                <td>@item.Parentesco </td>
+            </tr>
+        }
+        
+  
+  </table>
+</div>
+

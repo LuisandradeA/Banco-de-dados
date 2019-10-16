@@ -13,6 +13,7 @@ namespace Banco_de_dados.Repository
     public interface IEmpresaRepository
     {
         IEnumerable<Empregado> GetAllEmpregados();
+        IEnumerable<Dependente> GetAllDependentes();
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -34,5 +35,13 @@ namespace Banco_de_dados.Repository
                 return teste;
             }        
         }
+        public IEnumerable<Dependente> GetAllDependentes(){
+            using(IDbConnection dbConnection = Connection){
+                dbConnection.Open();
+                var teste = dbConnection.Query<Dependente>("SELECT * FROM dependente");
+                return teste;
+            }        
+        }
+    
     }
 }

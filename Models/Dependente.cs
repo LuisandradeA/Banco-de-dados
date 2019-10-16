@@ -9,7 +9,7 @@ namespace Banco_de_dados.Models
         public char Sexo {get; set;}
         public string Parentesco {get; set;}
         
-        public DateTime DataNascimento {get; set;}
+        public DateTime Dtnascimento {get; set;}
         
     }
 }
