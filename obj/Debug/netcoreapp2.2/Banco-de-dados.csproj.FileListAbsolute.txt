@@ -28,3 +28,5 @@
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Banco-de-dados.csproj.CopyComplete
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empresa/Index.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empresa/Privacy.g.cshtml.cs
+/Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/Index.g.cshtml.cs
+/Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/Privacy.g.cshtml.cs

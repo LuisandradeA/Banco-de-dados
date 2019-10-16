@@ -10,7 +10,7 @@ namespace Banco_de_dados.Models
         [Key]
         public string Codigo {get; set;}
         
-        public DateTime DataNascimento {get; set;}
+        public DateTime Dtnascimento {get; set;}
         public string Endereco {get; set;}
         public char Sexo {get; set;}
         public decimal Salario {get; set;}

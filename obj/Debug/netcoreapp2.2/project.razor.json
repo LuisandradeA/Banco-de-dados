@@ -2961,13 +2961,13 @@
   "RootNamespace": "Banco_de_dados",
   "Documents": [
     {
-      "FilePath": "Views/Empresa/Index.cshtml",
-      "TargetPath": "Views/Empresa/Index.cshtml",
+      "FilePath": "Views/Empregado/Privacy.cshtml",
+      "TargetPath": "Views/Empregado/Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Empresa copy/Privacy.cshtml",
-      "TargetPath": "Views/Empresa copy/Privacy.cshtml",
+      "FilePath": "Views/Empresa/Index.cshtml",
+      "TargetPath": "Views/Empresa/Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2978,11 +2978,6 @@
     {
       "FilePath": "Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views/Shared/_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Empresa copy/Index.cshtml",
-      "TargetPath": "Views/Empresa copy/Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3003,6 +2998,11 @@
     {
       "FilePath": "Views/_ViewStart.cshtml",
       "TargetPath": "Views/_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Empregado/Index.cshtml",
+      "TargetPath": "Views/Empregado/Index.cshtml",
       "FileKind": "mvc"
     },
     {
