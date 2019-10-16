@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Projetos";
+    @model List<Projeto>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Projetos</h1>
+</div>
+
+
+<div>
+  <table class="table">
+        <tr>
+          
+          <th>Descrição</th>
+          <th>Codigo</th>
+          <th>Local</th>
+          <th>Departamento</th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Descricao </td>
+                <td>@item.Codigo </td>
+                <td>@item.Local </td>
+                <td>@item.Departamento </td>
+            </tr>
+        }
+        
+  
+  </table>
+</div>
+

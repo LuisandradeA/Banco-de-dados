@@ -16,6 +16,7 @@ namespace Banco_de_dados.Repository
         IEnumerable<Dependente> GetAllDependentes();
         IEnumerable<Departamento> GetAllDepartamentos();
 
+        IEnumerable<Projeto> GetAllProjetos();
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -51,6 +52,12 @@ namespace Banco_de_dados.Repository
                 return teste;
             }        
         }
-        
+        public IEnumerable<Projeto> GetAllProjetos(){
+            using(IDbConnection dbConnection = Connection){
+                dbConnection.Open();
+                var teste = dbConnection.Query<Projeto>("SELECT * FROM projeto");
+                return teste;
+            }        
+        }
     }
 }

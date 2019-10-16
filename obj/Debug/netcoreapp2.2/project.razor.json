@@ -3029,6 +3029,11 @@
       "FilePath": "Views/Departamento/Index.cshtml",
       "TargetPath": "Views/Departamento/Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Projeto/Index.cshtml",
+      "TargetPath": "Views/Projeto/Index.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
