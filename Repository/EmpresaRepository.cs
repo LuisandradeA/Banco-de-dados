@@ -17,6 +17,7 @@ namespace Banco_de_dados.Repository
         IEnumerable<Departamento> GetAllDepartamentos();
 
         IEnumerable<Projeto> GetAllProjetos();
+        IEnumerable<Local> GetAllLocais();
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -59,5 +60,13 @@ namespace Banco_de_dados.Repository
                 return teste;
             }        
         }
+        public IEnumerable<Local> GetAllLocais(){
+            using(IDbConnection dbConnection = Connection){
+                dbConnection.Open();
+                var teste = dbConnection.Query<Local>("SELECT * FROM local");
+                return teste;
+            }        
+        }
+       
     }
 }

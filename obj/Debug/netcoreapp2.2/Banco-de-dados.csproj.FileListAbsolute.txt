@@ -35,3 +35,4 @@
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Departamento/Index.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Departamento/Privacy.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Projeto/Index.g.cshtml.cs
+/Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Local/Index.g.cshtml.cs

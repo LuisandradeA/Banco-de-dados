@@ -2986,6 +2986,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Local/Index.cshtml",
+      "TargetPath": "Views/Local/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views/Shared/_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
