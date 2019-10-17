@@ -2966,6 +2966,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/TrabalhaEm/Index.cshtml",
+      "TargetPath": "Views/TrabalhaEm/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Dependente/Index.cshtml",
       "TargetPath": "Views/Dependente/Index.cshtml",
       "FileKind": "mvc"

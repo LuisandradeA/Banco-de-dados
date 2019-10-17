@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Locais";
+    @model List<TrabalhaEm>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Locais</h1>
+</div>
+
+
+<div>
+  <table class="table">
+        <tr>
+          
+          <th>Departamento</th>
+          <th>Projeto</th>
+          <th>Horas</th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Empregado </td>
+                <td>@item.Projeto </td>
+                <td>@item.Horas </td>
+               
+            </tr>
+        }
+        
+  
+  </table>
+</div>
+
