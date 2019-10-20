@@ -38,3 +38,4 @@
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Local/Index.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/TrabalhaEm/Index.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/AdicionarEmpregado.g.cshtml.cs
+/Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/EmpregadoProjetoRelatorio.g.cshtml.cs

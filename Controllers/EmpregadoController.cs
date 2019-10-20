@@ -36,8 +36,9 @@ namespace Banco_de_dados.Controllers
         } 
         public IActionResult GetEmpregadoProjeto(string empregadoCodigo){
             
-            var teste = _empresaRepository.InserirEmpregado(empregado);
-            return View("AdicionarEmpregado");
+            var query = _empresaRepository.GetEmpregadoProjeto(empregadoCodigo);
+            
+            return View("EmpregadoProjetoRelatorio", query);
         } 
     }
 }

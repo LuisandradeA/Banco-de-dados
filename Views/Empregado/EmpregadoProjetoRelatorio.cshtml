@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Empregado";
+    @using Banco_de_dados.Models.Relatorios;
+    
+    @model List<EmpregadoProjetoRelatorio>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Relatório Projetos por Empregados</h1>
+</div>
+
+<div>
+  <h5><b>Empregado: </b>@Model[0].EmpregadoNome</h5>
+  <h5><b>Código: </b>@Model[0].EmpregadoCodigo</h5>
+</div>
+
+<div>
+  <table class="table">
+        <tr>
+          <th>Projeto</th>
+          <th>Departamento</th>
+          <th>Horas</th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.ProjetoDescricao </td>
+                <td> @item.DepartamentoNome </td>
+                <td> @item.TrabalhaEmHoras </td>
+
+            </tr>
+        }
+  
+  </table>
+</div>
+
+

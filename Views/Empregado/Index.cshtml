@@ -24,11 +24,12 @@
           <th>Salario</th>
           <th>gerente</th>
           <th>Departamento</th>
-          <th>Relatório Projeto/Horas</th>
+          <!-- <th>Editar</tr> -->
+          <th>Relatório Projetos por Empregados</th>
         </tr>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr id="@item.Codigo">
                 <td>@item.Nome </td>
                 <td>@item.NomeDoMeio </td>
                 <td>@item.SobreNome </td>
@@ -40,7 +41,7 @@
                 <td>@item.Gerente </td>
                 <td>@item.Departamento </td>
                 <td><button class="btn btn-info" type="button" id="addressSearch"   
-          onclick="location.href='@Url.Action("GetEmpregadoProjeto", "Empregado")'">Relatório</button></td> 
+          onclick="location.href='@Url.Action("GetEmpregadoProjeto", "Empregado")?empregadoCodigo=@item.Codigo'">Relatório</button></td> 
             </tr>
         }
         

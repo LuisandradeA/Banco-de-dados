@@ -6,7 +6,7 @@ using Banco_de_dados.Models;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
-
+using Banco_de_dados.Models.Relatorios;
 namespace Banco_de_dados.Repository
 {
     
@@ -21,6 +21,8 @@ namespace Banco_de_dados.Repository
         IEnumerable<TrabalhaEm> GetAllTrabalhaEm();
 
         Empregado InserirEmpregado(Empregado empregado);
+
+        IEnumerable<EmpregadoProjetoRelatorio> GetEmpregadoProjeto(string empregadoCodigo);
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -90,8 +92,22 @@ namespace Banco_de_dados.Repository
             }
         }
 
-    
-    
+        public IEnumerable<EmpregadoProjetoRelatorio> GetEmpregadoProjeto(string empregadoCodigo){
+            using(IDbConnection dbConnection = Connection){
+              
+
+
+                 dbConnection.Open();
+                var query = dbConnection.Query<EmpregadoProjetoRelatorio>("select e.nome AS EmpregadoNome,e.codigo AS EmpregadoCodigo ,p.descricao AS ProjetoDescricao, te.horas AS TrabalhaEmHoras, d.nome AS DepartamentoNome from empregado as e "+
+                                                                            " inner join trabalhaem te on te.empregado = e.codigo"+
+                                                                            " inner join projeto p on p.codigo = te.projeto" +
+                                                                            " inner join departamento d on p.departamento = d.codigo" +
+                                                                            " where e.codigo =  @EmpregadoCodigo" , new { EmpregadoCodigo = empregadoCodigo});
+                return query;
+            }
+        }
+
+
     
     
     }
