@@ -1,0 +1,77 @@
+﻿@model Empregado
+@{
+    ViewData["Title"] = "Empregado";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Empregados</h1>
+</div>
+
+
+<form asp-action="AdicionarEmpregadoAction" asp-controller="Empregado" method="post"> 
+   <div> 
+      <label asp-for = "Nome"></label> 
+      <input asp-for = "Nome" class="form-control" name="Nome" placeholder="Nome"/> 
+     
+   </div> 
+   <br>
+   <div> 
+      <label asp-for = "Codigo"></label> 
+      <input asp-for = "Codigo" name="Codigo" class="form-control" placeholder="Codigo"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "NomeDoMeio"></label> 
+      <input asp-for = "NomeDoMeio" name="NomeDoMeio" class="form-control" placeholder="NomeDoMeio"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "SobreNome"></label> 
+      <input asp-for = "SobreNome" name="SobreNome" class="form-control" placeholder="SobreNome"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "Endereco"></label> 
+      <input asp-for = "Endereco" name="Endereco" class="form-control" placeholder="Endereco"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "Sexo"></label> 
+      <input asp-for = "Sexo" name="Sexo" class="form-control" placeholder="Sexo"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "Salario"></label> 
+      <input asp-for = "Salario" name="Salario" class="form-control" placeholder="Salario"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "Gerente"></label> 
+      <input asp-for = "Gerente" name="Gerente" class="form-control" placeholder="Gerente"/> 
+     
+   </div> 
+<br><div> 
+      <label asp-for = "Departamento"></label> 
+      <input asp-for = "Departamento" name="Departamento" class="form-control" placeholder="Departamento"/> 
+     
+   </div> 
+<br>
+<div> 
+      <label asp-for = "Dtnascimento"></label> 
+      <input asp-for = "Dtnascimento"  name="Dtnascimento" class="form-control" placeholder="Dtnascimento"/> 
+     
+   </div> 
+<br>
+   <div> 
+      <br>
+      <input type = "submit" value = "Adicionar"  class="btn btn-primary"/> 
+     
+   </div> 
+</form>

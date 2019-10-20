@@ -24,16 +24,20 @@ namespace Banco_de_dados.Controllers
             
             return View(listaTodosEmpregados);
         }
-
-        public IActionResult Privacy()
-        {
+        public IActionResult AdicionarEmpregado(){
+            
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        } 
+        [HttpPost]
+        public IActionResult AdicionarEmpregadoAction(Empregado empregado){
+            
+            var teste = _empresaRepository.InserirEmpregado(empregado);
+            return View("AdicionarEmpregado");
+        } 
+        public IActionResult GetEmpregadoProjeto(string empregadoCodigo){
+            
+            var teste = _empresaRepository.InserirEmpregado(empregado);
+            return View("AdicionarEmpregado");
+        } 
     }
 }

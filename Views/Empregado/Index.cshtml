@@ -8,6 +8,10 @@
 </div>
 
 <div>
+   <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("AdicionarEmpregado", "Empregado")'" />Adicionar Empregado</button>
+</div>
+<br>
+<div>
   <table class="table">
         <tr>
           <th>Nome</th>
@@ -20,6 +24,7 @@
           <th>Salario</th>
           <th>gerente</th>
           <th>Departamento</th>
+          <th>Relatório Projeto/Horas</th>
         </tr>
         @foreach (var item in Model)
         {
@@ -34,6 +39,8 @@
                 <td>@item.Salario </td>
                 <td>@item.Gerente </td>
                 <td>@item.Departamento </td>
+                <td><button class="btn btn-info" type="button" id="addressSearch"   
+          onclick="location.href='@Url.Action("GetEmpregadoProjeto", "Empregado")'">Relatório</button></td> 
             </tr>
         }
         

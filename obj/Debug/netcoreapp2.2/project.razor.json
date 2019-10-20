@@ -3021,6 +3021,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Empregado/AdicionarEmpregado.cshtml",
+      "TargetPath": "Views/Empregado/AdicionarEmpregado.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Empregado/Index.cshtml",
       "TargetPath": "Views/Empregado/Index.cshtml",
       "FileKind": "mvc"

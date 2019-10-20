@@ -19,6 +19,8 @@ namespace Banco_de_dados.Repository
         IEnumerable<Projeto> GetAllProjetos();
         IEnumerable<Local> GetAllLocais();
         IEnumerable<TrabalhaEm> GetAllTrabalhaEm();
+
+        Empregado InserirEmpregado(Empregado empregado);
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -36,7 +38,7 @@ namespace Banco_de_dados.Repository
         public IEnumerable<Empregado> GetAllEmpregados(){
             using(IDbConnection dbConnection = Connection){
                 dbConnection.Open();
-                var teste = dbConnection.Query<Empregado>("SELECT * FROM empregado");
+                var teste = dbConnection.Query<Empregado>("SELECT * FROM empregado ORDER BY nome ASC");
                 return teste;
             }        
         }
@@ -75,6 +77,22 @@ namespace Banco_de_dados.Repository
                 return teste;
             }        
         }
+        public Empregado InserirEmpregado(Empregado empregado){
+            using(IDbConnection dbConnection = Connection){
+              
+                dbConnection.Open();
+                var query = "INSERT INTO empregado (nome, nomedomeio, sobrenome, codigo, endereco,  salario, departamento, sexo, gerente, Dtnascimento)" +
+                            "VALUES (@Nome, @NomeDoMeio, @SobreNome, @Codigo, @Endereco, @Salario,  @Departamento, @Sexo, @Gerente, @Dtnascimento)";
+            
+                var count = dbConnection.Execute(query, empregado);
+            
+                return empregado;
+            }
+        }
 
+    
+    
+    
+    
     }
 }
