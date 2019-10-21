@@ -9,7 +9,15 @@
     <h1 class="display-4">Relatório Projetos por Empregados</h1>
 </div>
 
-<div>
+@if(!Model.Any() || Model == null){
+  <div class="alert alert-danger" role="alert">
+  Este empregado não está associado a nenhum projeto.
+</div>
+}
+
+else
+{
+    <div>
   <h5><b>Empregado: </b>@Model[0].EmpregadoNome</h5>
   <h5><b>Código: </b>@Model[0].EmpregadoCodigo</h5>
 </div>
@@ -34,5 +42,7 @@
   
   </table>
 </div>
+
+}
 
 

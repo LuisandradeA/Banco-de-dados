@@ -40,5 +40,18 @@ namespace Banco_de_dados.Controllers
             
             return View("EmpregadoProjetoRelatorio", query);
         } 
+
+        public IActionResult EditarEmpregado(string empregadoCodigo){
+            
+            var empregado = _empresaRepository.GetEmpregadoPorCodigo(empregadoCodigo);
+
+            return View("EditarEmpregado", empregado);
+        }
+        public IActionResult EditarEmpregadoAction(Empregado empregado){
+            
+            _empresaRepository.EditarEmpregado(empregado);
+            var listaTodosEmpregados = _empresaRepository.GetAllEmpregados();
+            return View("Index", listaTodosEmpregados);
+        }
     }
 }

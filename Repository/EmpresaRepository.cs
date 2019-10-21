@@ -7,6 +7,8 @@ using Dapper;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using Banco_de_dados.Models.Relatorios;
+using System.Linq;
+
 namespace Banco_de_dados.Repository
 {
     
@@ -21,8 +23,11 @@ namespace Banco_de_dados.Repository
         IEnumerable<TrabalhaEm> GetAllTrabalhaEm();
 
         Empregado InserirEmpregado(Empregado empregado);
+        void EditarEmpregado(Empregado empregado);
 
         IEnumerable<EmpregadoProjetoRelatorio> GetEmpregadoProjeto(string empregadoCodigo);
+    
+        Empregado GetEmpregadoPorCodigo(string empregadoCodigo);
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -107,8 +112,28 @@ namespace Banco_de_dados.Repository
             }
         }
 
+        public Empregado GetEmpregadoPorCodigo(string empregadoCodigo){
+            using(IDbConnection dbConnection = Connection){
+              
 
-    
+
+                 dbConnection.Open();
+                var query = dbConnection.Query<Empregado>("select * from empregado as e"+
+                                                          " where e.codigo =  @EmpregadoCodigo" , new { EmpregadoCodigo = empregadoCodigo});
+                return query.AsList().FirstOrDefault();
+            }
+        }
+        public void EditarEmpregado(Empregado empregado){
+            using(IDbConnection dbConnection = Connection){
+              
+                dbConnection.Open();
+                var query = "UPDATE empregado set nome = @Nome, nomedomeio = @NomeDoMeio, sobrenome = @SobreNome, codigo = @Codigo, endereco = @Endereco,  salario = @Salario, departamento = @Departamento, sexo = @Sexo, gerente = @Gerente, dtnascimento = @DtNascimento" + 
+                            " WHERE codigo = '" + empregado.Codigo + "'";
+            
+                var count = dbConnection.Execute(query, empregado);
+            
+            }
+        }
     
     }
 }
