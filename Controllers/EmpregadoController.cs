@@ -53,5 +53,12 @@ namespace Banco_de_dados.Controllers
             var listaTodosEmpregados = _empresaRepository.GetAllEmpregados();
             return View("Index", listaTodosEmpregados);
         }
+        public IActionResult DeletarEmpregadoAction(string empregadoCodigo){
+            
+            _empresaRepository.DeletarEmpregado(empregadoCodigo);
+            var listaTodosEmpregados = _empresaRepository.GetAllEmpregados();
+            return View("Index", listaTodosEmpregados);
+        }    
+    
     }
 }

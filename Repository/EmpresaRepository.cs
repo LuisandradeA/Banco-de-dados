@@ -28,6 +28,7 @@ namespace Banco_de_dados.Repository
         IEnumerable<EmpregadoProjetoRelatorio> GetEmpregadoProjeto(string empregadoCodigo);
     
         Empregado GetEmpregadoPorCodigo(string empregadoCodigo);
+        void DeletarEmpregado(string empregadoCodigo);
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -129,11 +130,26 @@ namespace Banco_de_dados.Repository
                 dbConnection.Open();
                 var query = "UPDATE empregado set nome = @Nome, nomedomeio = @NomeDoMeio, sobrenome = @SobreNome, codigo = @Codigo, endereco = @Endereco,  salario = @Salario, departamento = @Departamento, sexo = @Sexo, gerente = @Gerente, dtnascimento = @DtNascimento" + 
                             " WHERE codigo = '" + empregado.Codigo + "'";
-            
+
                 var count = dbConnection.Execute(query, empregado);
             
             }
         }
-    
+        public void DeletarEmpregado(string empregadoCodigo){
+            using(IDbConnection dbConnection = Connection){
+              dbConnection.Open();
+                //primeiro, Deletar registros de Trabalhaem
+                var query = "DELETE FROM trabalhaem " + 
+                            " WHERE empregado = '" + empregadoCodigo + "'";
+                
+                var count = dbConnection.Execute(query, empregadoCodigo);
+
+                var query2 = "DELETE FROM empregado " + 
+                            " WHERE codigo = '" + empregadoCodigo + "'";
+                
+                var count2 = dbConnection.Execute(query2, empregadoCodigo);
+            
+            }
+        }
     }
 }
