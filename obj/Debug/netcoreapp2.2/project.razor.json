@@ -2981,6 +2981,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Empregado/GetDependentesByEmpregadoCodigo.cshtml",
+      "TargetPath": "Views/Empregado/GetDependentesByEmpregadoCodigo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Empresa/Index.cshtml",
       "TargetPath": "Views/Empresa/Index.cshtml",
       "FileKind": "mvc"
@@ -3053,6 +3058,11 @@
     {
       "FilePath": "Views/Departamento/Index.cshtml",
       "TargetPath": "Views/Departamento/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Empregado/AssociarEmpregadoProjeto.cshtml",
+      "TargetPath": "Views/Empregado/AssociarEmpregadoProjeto.cshtml",
       "FileKind": "mvc"
     },
     {

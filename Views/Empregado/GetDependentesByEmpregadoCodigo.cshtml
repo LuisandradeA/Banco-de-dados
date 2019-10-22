@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Empregado";
+    
+    
+    @model List<Dependente>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Relatório Projetos por Empregados</h1>
+</div>
+
+@if(!Model.Any() || Model == null){
+  <div class="alert alert-danger" role="alert">
+  Este empregado não possui dependentes cadastrados.
+</div>
+}
+
+else
+{
+   
+
+<div>
+  <table class="table">
+        <tr>
+          <th>Nome</th>
+          <th>Sexo</th>
+          <th>Parentesco</th>
+          <th>Data de Nascimento</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.Nome </td>
+                <td> @item.Sexo </td>
+                <td> @item.Parentesco </td>
+                <td> @item.Dtnascimento.ToShortDateString() </td>
+            </tr>
+        }
+  
+  </table>
+</div>
+
+}
+
+

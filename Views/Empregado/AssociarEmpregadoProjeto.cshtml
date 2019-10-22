@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Empregado";
+   @model Projeto
+}
+
+<script>
+
+
+
+</script>
+
+<div class="text-center">
+    <h1 class="display-4">Projetos</h1>
+</div>
+
+
+<form asp-action="AssociarEmpregadoProjetoAction" asp-controller="Empregado" method="post"> 
+      <select asp-for="Codigo" asp-items="@ViewBag.ProjetosList"></select>
+
+      
+      <br><br>
+      <input type = "submit" value = "Associar projeto"  class="btn btn-primary"/> 
+     
+   </div> 
+</form>

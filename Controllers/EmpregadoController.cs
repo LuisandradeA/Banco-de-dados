@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Banco_de_dados.Models;
 using Banco_de_dados.Repository;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Banco_de_dados.Controllers
 {
@@ -59,6 +60,29 @@ namespace Banco_de_dados.Controllers
             var listaTodosEmpregados = _empresaRepository.GetAllEmpregados();
             return View("Index", listaTodosEmpregados);
         }    
-    
+        public IActionResult AssociarEmpregadoProjeto(string empregadoCodigo){
+            
+            var projetos = _empresaRepository.GetAllProjetos();
+            var selectList = projetos.Select(x => new SelectListItem(){Text=x.Descricao,Value = x.Codigo.ToString()}).ToList();
+            
+            ViewBag.ProjetosList = selectList;
+            ViewBag.empregadoCodigo = empregadoCodigo;
+            return View();
+        }
+        public IActionResult AssociarEmpregadoProjetoAction(){
+            
+            var projetos = _empresaRepository.GetAllProjetos();
+            var selectList = projetos.Select(x => new SelectListItem(){Text=x.Descricao,Value = x.Codigo.ToString()}).ToList();
+            
+            ViewBag.ProjetosList = selectList;
+            
+            return View();
+        }
+        public IActionResult GetDependentesByEmpregadoCodigo(string empregadoCodigo){
+            
+            var dependentes = _empresaRepository.GetDependentesByEmpregadoCodigo(empregadoCodigo);
+            
+            return View(dependentes);
+        }
     }
 }

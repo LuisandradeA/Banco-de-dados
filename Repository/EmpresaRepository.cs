@@ -16,6 +16,7 @@ namespace Banco_de_dados.Repository
     {
         IEnumerable<Empregado> GetAllEmpregados();
         IEnumerable<Dependente> GetAllDependentes();
+         IEnumerable<Dependente> GetDependentesByEmpregadoCodigo(string empregadoCodigo);
         IEnumerable<Departamento> GetAllDepartamentos();
 
         IEnumerable<Projeto> GetAllProjetos();
@@ -29,6 +30,8 @@ namespace Banco_de_dados.Repository
     
         Empregado GetEmpregadoPorCodigo(string empregadoCodigo);
         void DeletarEmpregado(string empregadoCodigo);
+    
+    
     }
     
     public class EmpresaRepository : IEmpresaRepository
@@ -143,7 +146,8 @@ namespace Banco_de_dados.Repository
                             " WHERE empregado = '" + empregadoCodigo + "'";
                 
                 var count = dbConnection.Execute(query, empregadoCodigo);
-
+                
+                //deletando registros de empregado
                 var query2 = "DELETE FROM empregado " + 
                             " WHERE codigo = '" + empregadoCodigo + "'";
                 
@@ -151,5 +155,13 @@ namespace Banco_de_dados.Repository
             
             }
         }
+        public IEnumerable<Dependente> GetDependentesByEmpregadoCodigo(string empregadoCodigo){
+            using(IDbConnection dbConnection = Connection){
+                dbConnection.Open();
+                var teste = dbConnection.Query<Dependente>("SELECT * FROM dependente WHERE empregado = @EmpregadoCodigo", new {EmpregadoCodigo = empregadoCodigo});
+                return teste;
+            }
+        }
+    
     }
 }

@@ -40,3 +40,5 @@
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/AdicionarEmpregado.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/EmpregadoProjetoRelatorio.g.cshtml.cs
 /Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/EditarEmpregado.g.cshtml.cs
+/Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/AssociarEmpregadoProjeto.g.cshtml.cs
+/Users/defaut/Documents/Banco de dados/Trabalho Empresa/Banco-de-dados/obj/Debug/netcoreapp2.2/Razor/Views/Empregado/GetDependentesByEmpregadoCodigo.g.cshtml.cs

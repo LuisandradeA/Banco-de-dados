@@ -11,5 +11,6 @@ namespace Banco_de_dados.Models
         
         public DateTime Dtnascimento {get; set;}
         
+        
     }
 }

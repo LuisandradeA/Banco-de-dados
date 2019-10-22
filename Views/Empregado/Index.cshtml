@@ -12,7 +12,7 @@
 </div>
 <br>
 <div>
-  <table class="table">
+  <table style="" class="table">
         <tr>
           <th>Nome</th>
           <th>Nome do Meio</th>
@@ -24,9 +24,11 @@
           <th>Salario</th>
           <th>gerente</th>
           <th>Departamento</th>
-          <th>Editar</tr>
+          <th>Editar</th>
           <th>Remover</th>
-          <th>Relatório</th>
+          <th>Associar a Projeto</th>
+          <th>Relatório de Projetos</th>
+          <th>Dependentes</th>
           
         </tr>
         @foreach (var item in Model)
@@ -46,8 +48,12 @@
           onclick="location.href='@Url.Action("EditarEmpregado", "Empregado")?empregadoCodigo=@item.Codigo'">Editar</button></td> 
                  <td><button class="btn btn-danger" type="button" id="addressSearch"   
           onclick="location.href='@Url.Action("DeletarEmpregadoAction", "Empregado")?empregadoCodigo=@item.Codigo'">Deletar</button></td> 
+                <td><button class="btn btn-success" type="button" id="addressSearch"   
+          onclick="location.href='@Url.Action("AssociarEmpregadoProjeto", "Empregado")?empregadoCodigo=@item.Codigo'">Associar Projeto</button></td>
                 <td><button class="btn btn-info" type="button" id="addressSearch"   
           onclick="location.href='@Url.Action("GetEmpregadoProjeto", "Empregado")?empregadoCodigo=@item.Codigo'">Relatório</button></td> 
+                <td><button class="btn btn-info" type="button" id="addressSearch"   
+          onclick="location.href='@Url.Action("GetDependentesByEmpregadoCodigo", "Empregado")?empregadoCodigo=@item.Codigo'">Dependentes</button></td>
             </tr>
         }
         
